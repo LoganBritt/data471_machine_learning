@@ -1,0 +1,64 @@
+1. Which of the following did you implement, and which did you not implement:
+    * Part I: prediction and evaluation modes
+    * Part II: the analytical solution training mode
+    * Part III: the gradient descent training mode
+    * Part IV: polynomial features
+
+To the best of my abilities, I've implemented all four parts. I cannot garentee the success of my
+programs because I do not fully understand how to use the program as a whole, but if my way of understanding
+it is correct, then they are all fully implemented.
+
+2.  Declare/discuss any aspects of your program that are not working. What are your intuitions about
+    why things are not working? Which potential causes have you already explored and ruled out? Given
+    more time, what would you try next? Detailed answers here are critical to getting partial credit for
+    malfunctioning programs, and failure to disclose obvious problems will lead to additional penalties.
+
+To my understanding, my program works flawlessly. There may be problems with using the commands, I wasn't clear
+on some of the restrictions and never heard back on my clarification emails. However, my programs have been able 
+to train and predict with under 10^-8th degree in some cases. This degree of success makes me worried either my 
+program does not function as expected or I am not using it properly, but that is the results as far as I understand.
+
+If I were given more time, I would spend it experimenting with different data sets to test the limits of my training
+algorithms. I'm sure that there are many oversights in regards to what kinds of data inputs that can be taken in,
+and I'd want to cover those areas. Additionally, there's a lot of polishing that needs to be done. I'm sure that
+there are problems regarding certain error handling and input control, and my error statements might be able to be
+more clear as well. I simply do not have the time to polish my edges, only to get the program functional at best.
+Additionally, I'd like to test more the quality of training between analytical and gradient algorithms. 
+
+3.  What was the most challenging aspect of this assignment, and why?
+
+Mostly the lack of direction from the assignment page caused me trouble. I found myself spending several hours trying
+to understand the steps I would need to take in order to get started on the program. The theory side of class is
+fine to understand, but translating it to code ws incredibly difficult. Additionally, I havn't worked in python in
+6-7 years, and we never touched code that works with other files. So I basically needed to relearn python, learn how to
+read and write from files in python, and learn how to use numpy. On top of all that, I needed to balance it with 
+completing this assignment and other assignments for my other classes, that are equally as intensive. This ended up being
+incredibly difficult, and I had to sacrifice too much sleep to manage it.
+
+4.  If you completed both Part II and Part III, how does the runtime compare for the datasets you tried?
+
+Analytical is a lot faster, since we're only really preforming one calculation. However, I feel the gradient is a lot more
+accurate, considering it sacrifices time in exchange for retraining several times. I didn't get specific stats for the time
+differences between the two training algorithms, but the results for analytical was almost instant compared to the gradient
+algorithm that with enough steps can take minutes. 
+
+5.  If you completed both Part II and Part III, how do the solutions the training approaches yield compare?
+    Are they similar in the parameter estimates? Do they yield similar dev set performance?
+
+They are very similar, I feel the data sets aren't large enough to see considerable differences. However, the gradient mode
+is more accurate I feel, since the evaluation on it's model and predictions is really really small (10^-8th error) compared
+to the analytical model being only in the tenth/hundred error. However, both are not bad results, and I expect that the 
+problems should only become relevant enough with much larger models with more data or more parameters.
+
+6.  If you completed Part IV, for each of the held out "class standard" dev sets that have D = 1, what order
+    of polynomial gives the best performance?
+
+Through experimentation, I've discovered that order 2 works the best with the following data:
+    Order 1: 0.0009953000117093325
+    Order 2: 0.0006110999966040254
+    Order 3: 0.000862100045196712
+    Order 4: 0.004512700019404292
+
+This could be due to coincidence, however, it's hard to determine if it is or not without further experimentation
+From the data, I found order 2 is the best, and it gets worse as the order gets higher. This could be due to the data being
+small, and a large data set might work better with a higher order. 

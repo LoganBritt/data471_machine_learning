@@ -1,0 +1,29 @@
+1. Which of the following did you implement, and which did you not implement?
+    * Part I: prediction mode
+    * Part II: evaluation mode
+    * Part III: training mode
+    I implemented all three parts. Prediction and evaluation were mostly already completed from the previous assignment.
+    Training took the core from my gradient solution from the previous assignment with lots of modification for this one,
+    and I've implemented everything to the best of my knowledge. 
+
+2. Declare/discuss any aspects of your program that are not working. What are your intuitions about why things are not working? Which potential causes have you already explored and ruled out? Given more time, what would you try next? Detailed answers here are critical to getting partial credit for malfunctioning programs, and failure to disclose obvious problems will lead to additional penalties.
+    I believe everything in the program is working. I tested it with the model and compared it to the sanity check, as well as using
+    my evaluation program to check if it's accurate. However, I felt the same way about my last program and failed it, so I might not
+    be a good person to judge whether a program is working or not. Given more time, I'd look into other ways to test it's accuracy to
+    ensure things are accurate as I believe they are. Additionally, I'm curious how to use models like this for real purposes, rather
+    than just to predict vague data values. 
+
+3. What was the most challenging aspect of this assignment, and why?
+    The most challenging part was applying minibatching to the gradient and figuring out how to break it into pieces.
+    Most of the program was stuff I could mimic from my gradient solution, I just needed to modify it to work in a
+    minibatch system, as well as working with binary files, which I needed to learn how to adjust to as well. 
+
+4. If you completed Part III, does the minibatch size affect the final dev set performance? If so, how?
+    I'm honestly not seeing any real differences between my minibatch sizes. I tested with sizes 8, 16, 32, and 64
+    and all of those provided an accuracy with an error of +/- 1% of each other. However, with the multi sets, there
+    was a trend of the preformance getting worse as the minibatch size got higher. 
+
+5. If you completed Part III, does the minibatch size affect the time it takes to get your best dev set performance? If so, how?
+    It would appear it sometimes does affect it. Changing the minibatch size in the binary set didn't seem to have any difference,
+    however there was a minor difference in the blobs and multi sets. In both of them, it took the longest at size 16 and increased
+    until it reached there, but after passing it, it took less time with increasing size. 
